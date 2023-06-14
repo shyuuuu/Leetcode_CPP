@@ -8,19 +8,19 @@ public:
         while(size > 0){
             if(m > 0 && n > 0 && nums1[m-1] > nums2[n-1]){
                 nums1[size-1] = nums1[m-1];
-                m--;
-                size--;
+                --m;
+                --size;
             }else{
                 if(m > 0 && n > 0){
                     nums1[size-1] = nums2[n-1];
-                    n--;
-                    size--;
+                    --n;
+                    --size;
                 }else{
                     if(m == 0){
                         while(n > 0){
                             nums1[size-1] = nums2[n-1];
-                            n--;
-                            size--;
+                            --n;
+                            --size;
                         }
                     }else{
                         return ;
